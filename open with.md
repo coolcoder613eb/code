@@ -16,8 +16,10 @@ from tkinter import filedialog
 filetypes = (('Text files', '*.txt'),('All files', '*.*'))
 
 #if filename is not specified, ask for a file
-def openfile(filename = filedialog.askopenfilename(title='Open A File',filetypes=filetypes)):
+def openfile(filename = ''):
     #print contents of file
+    if filename == '':
+        filename = filedialog.askopenfilename(title='Open A File',filetypes=filetypes)
     with open(filename,'r', encoding="utf-8") as file:
         read = file.read()
     print(read)

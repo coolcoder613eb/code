@@ -35,13 +35,14 @@ except:
 
 ```
 then compile it to exe with nuitka (or whatever tool you use),<br>
-and try it. 
+and try it.<br> 
 <br>or (for testing, without having to compile it every time you make a change):<br>
-make a .py file 
-```python
-from subprocess import call
-from sys import argv
-call(f'py print.py {argv[1]}')
+make a .bat file 
+```bat
+@echo off
+cd
+py program.py %*
+pause
 ```
-then compile *that* to exe,<br>
-so you dont have to compile the actual program every time.
+Then every time you want to run it,<br>
+you `open with` *that* file.

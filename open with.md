@@ -28,10 +28,11 @@ def openfile(filename = ''):
 
 try:
     #if "open with" has been used
-    openfile(filename = sys.argv[1])
+    openfile(filename = sys.argv[1].encode('unicode_escape'))
 except:
     #ask for a file
     openfile()
+
 ```
 then compile it to exe with nuitka (or whatever tool you use),<br>
 and try it. 

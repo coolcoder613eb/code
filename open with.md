@@ -1,5 +1,5 @@
 simple example:
-``` 
+``` python
 import sys
 try:
     #if "open with" has been used
@@ -9,7 +9,7 @@ except:
     pass
 ```
 usage example:
-``` 
+``` python
 import sys
 from tkinter import filedialog
 
@@ -38,7 +38,7 @@ then compile it to exe with nuitka (or whatever tool you use),<br>
 and try it. 
 <br>or (for testing, without having to compile it every time you make a change):<br>
 make a .py file 
-```
+```python
 from subprocess import call
 from sys import argv
 call(f'py print.py {argv[1]}')

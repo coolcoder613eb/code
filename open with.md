@@ -28,7 +28,7 @@ def openfile(filename = ''):
 
 try:
     #if "open with" has been used
-    openfile(filename = sys.argv[1].encode('unicode_escape'))
+    openfile(filename = sys.argv[1])
 except:
     #ask for a file
     openfile()
